@@ -18,6 +18,7 @@ def load_data(filepath, chunk_size=1024):
 def get_most_frequent_words(filepath, words_count):
     c = Counter()
     for peace in load_data(filepath):
+        peace = peace.lower()
         c.update(re.findall(r"(\w+)", peace))
     frequent_words = c.most_common()[:words_count]
     print_result(frequent_words)
