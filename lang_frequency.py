@@ -24,8 +24,10 @@ def print_result(frequent_words):
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         text = load_data(sys.argv[1])
-        frequent_words = find_most_frequent_words(text,
-                                                  words_count_to_show=10)
+        frequent_words = find_most_frequent_words(
+            text,
+            words_count_to_show=10
+        )
         print_result(frequent_words)
     else:
         print("enter path to a file")
